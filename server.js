@@ -4,6 +4,7 @@ const cors = require("cors");
 const csv = require("csvtojson");
 
 const app = express();
+const port = process.env.PORT || 3001;
 
 app.use(cors());
 
@@ -104,5 +105,4 @@ app.get("/products/:id", async (request, response) => {
     }
 });
 
-const port = 3001;
 app.listen(port, () => console.log("server started at port ", port));
